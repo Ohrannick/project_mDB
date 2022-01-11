@@ -36,14 +36,43 @@ console.dir(items);
 
 adv.forEach((item) => item.remove());
 
-const newGenre = "драма";
-fun.innerHTML = newGenre;
+fun.innerHTML = "драма";
 
 bgImg.style.backgroundImage = 'url("../img/bg.jpg")';
 
-const sortMovies = movieDB.movies.sort();
-console.log(sortMovies);
+movieDB.movies.sort();
+console.log(movieDB);
 
 for (let i = 0; i < items.length; i++) {
-  items[i].innerHTML = `${i + 1}. ${sortMovies[i]}`;
+  items[i].innerHTML = `${i + 1}. ${movieDB.movies[i]}`;
 }
+
+// const adv = document.querySelectorAll(".promo__adv img"),
+//   poster = document.querySelector(".promo__bg"),
+//   genre = poster.querySelector(".promo__genre"),
+//   movieList = document.querySelector(".promo__interactive-list");
+
+// console.dir(adv);
+// console.dir(poster);
+// console.dir(genre);
+// console.dir(movieList);
+
+// adv.forEach((item) => {
+//   item.remove();
+// });
+
+// genre.textContent = "драма";
+
+// poster.style.backgroundImage = 'url("img/bg.jpg")';
+
+// movieList.innerHTML = "";
+
+// movieDB.movies.sort();
+
+// movieDB.movies.forEach((film, i) => {
+//   movieList.innerHTML += `
+//         <li class="promo__interactive-item">${i + 1}. ${film}
+//             <div class="delete"></div>
+//         </li>
+//     `;
+// });
